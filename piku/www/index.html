@@ -1,0 +1,103 @@
+
+<!DOCTYPE>
+<html>
+<head>
+
+  <title>iron-flex-layout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+  <link rel="import" href="bower_components/paper-header-panel">
+  <link rel="import" href="x-app.html">
+    
+
+    <style is="custom-style">
+        
+
+      #paperDrawerPanel [main] {
+        background-color: var(--google-grey-100);
+      }
+
+      #paperDrawerPanel [drawer] {
+        border-right: 1px solid var(--google-grey-300);
+      }
+
+      #paperDrawerPanel[right-drawer] [drawer] {
+        border-left: 1px solid var(--google-grey-300);
+      }
+
+      paper-button {
+        color: white;
+        margin: 10px;
+        background-color: var(--google-blue-700);
+        white-space: nowrap;
+      }
+
+
+        
+      .paper-header {
+        height: 60px;
+          width: 100%
+        font-size: 16px;
+        line-height: 60px;
+        padding: 0 10px;
+        color: white;
+        transition: height 0.2s;
+      }
+
+      .paper-header.tall {
+        height: 120px;
+      }
+
+      .paper-header.medium-tall {
+        height: 100px;
+        line-height: 50px;
+      }
+
+      .content {
+        height: 2000px;
+      }
+
+      .pink .paper-header {
+        background-color: var(--paper-pink-a200);
+      }
+
+      /* TODO: replace these with background: linear-gradient(white, var(...))
+       when custom properties allow it */
+
+        {
+        background: linear-gradient(white, #f8bbd0);
+      }
+    </style>
+  </head>
+
+<body class="fullbleed layout vertical">
+      <paper-header-panel mode="waterfall-tall" class="pink">
+          
+        <div class="paper-header">waterfall-tall</div>
+        <div class="content">
+          
+           <paper-drawer-panel id="paperDrawerPanel">
+               
+      <div drawer>
+        <ol>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li></ol>
+        </div>
+      <div main>
+        <div>
+          <paper-button paper-drawer-toggle raised>toggle drawer</paper-button>
+        </div>
+      </div>
+            
+          </div> 
+      </paper-header-panel>
+    
+
+     
+  </body>
+
+</html>
